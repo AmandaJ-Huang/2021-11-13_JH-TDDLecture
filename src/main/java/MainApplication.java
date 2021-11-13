@@ -21,22 +21,23 @@ public class MainApplication {
         while(!sorted) {
             sorted = true;
             for (int i = 1; i < input.length; i++) {
-                //if the 2nd num [i] is smaller than the 1st num [i-1]
+
 //                if ((input[i].length() == input[i - 1].length()
 //                        && input[i].compareTo(input[i - 1]) < 0)
 //                    || input[i].length() < input[i - 1].length()) {
-                if (currentIsLessThanPrevious(input[i], input[i-1])) {
-                    String temp = input[i];
-                    input[i] = input[i - 1];
-                    input[i - 1] = temp;
-                    sorted = false;
-                }
 //                if (input[i].length() < input[i - 1].length()) {
 //                    String temp = input[i];
 //                    input[i] = input[i - 1];
 //                    input[i - 1] = temp;
 //                    sorted = false;
 //                }
+                if (currentIsLessThanPrevious(input[i], input[i-1])) {
+                    String temp = input[i];
+                    input[i] = input[i - 1];
+                    input[i - 1] = temp;
+                    sorted = false;
+                }
+
             }
         }
         return input;
